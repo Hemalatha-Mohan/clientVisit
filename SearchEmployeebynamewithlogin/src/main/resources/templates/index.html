@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="ISO-8859-1">
+
+    <title>Employee</title>
+
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+
+    <style>
+
+        #buttonsearch{
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+        .container{
+
+            margin-top: 70px;
+
+            margin-left: auto;
+
+        }
+
+        body{
+
+            background-image: url(/searchemployeeimage.png);
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <b><h1 class="text-center">Search Employee</h1></b>
+
+    <br>
+
+    <div class="row justify-content-center">
+
+        <div class="col-sm-4">
+
+            <form action="#" th:action="@{/search}" th:object="${employee}" method="post">
+
+                <div class="form-group">
+
+                    <b><label for="employeeName">Employee Name</label></b>
+
+                    <input type="text" id="employeeName" th:field="*{ename}" class="form-control" placeholder="Employee Name">
+
+                </div>
+
+                <div id="buttonsearch"><button type="submit" class="btn btn-info">Search</button></div>
+
+            </form>
+
+            <br>
+
+            <div class="form-group">
+
+                <b><label for="employeeMobile">Employee Mobile</label></b>
+
+                <input type="text" id="employeeMobile" th:field="${employee.mobile}" class="form-control" value="Employee Contact No"  readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <b><label for="employeeAddress">Employee Address</label></b>
+
+                <textarea rows="4" cols="50" id="employeeAddress" th:field="${employee.address}" class="form-control" value="Employee Address" placeholder="Employee Address"  readonly ></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
