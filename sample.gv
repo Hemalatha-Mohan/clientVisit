@@ -2,7 +2,7 @@
 <processDefinition name="SampleJDBCProcess">
 <activities>
 <jdbcActivity name="SelectCustomer">
-<username>admin</username>       <!-- Hardcoded username -->
+
 <password>password123</password> <!-- Hardcoded password -->
 <!-- Missing <timeout> element -->
 <query>SELECT * FROM Customers</query>
