@@ -4,7 +4,7 @@
 <jdbcActivity name="SelectCustomer">
 <username>admin</username>       <!-- Hardcoded username -->
 <password>password123</password> <!-- Hardcoded password -->
-<timeout>30000</timeout>  <!-- Hardcoded timeout -->
+<timeout>40000</timeout>  <!-- Hardcoded timeout -->
 <query>SELECT * FROM Customers</query>
 </jdbcActivity>
         <jdbcActivity name="UpdateOrder">
